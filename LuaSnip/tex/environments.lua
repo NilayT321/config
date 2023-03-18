@@ -106,5 +106,29 @@ return {
 				)
 		),
 
-			
+		-- Corollary environment
+		s(
+				{trig = "!cor", snippetType = "autosnippet"},
+				fmta(
+						[[
+								\begin{cor}{}{}
+										<>
+								\end{cor}
+						]],
+						{i(1)}
+				)
+		),
+
+		-- Proof 
+		s(
+				{trig = "!pf", snippetType = "autosnippet"},
+				fmta(
+						[[
+								\begin{proof}
+										<>
+								\end{proof}
+						]],
+						{i(1)}
+				)
+		),
 }
