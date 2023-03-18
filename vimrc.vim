@@ -37,8 +37,9 @@ let g:lightline = {
 
 " set colorscheme
 
+colorscheme onedark
 let g:onedark_config = {
     \ 'style': 'cool',
 \}
-colorscheme onedark
+
 syntax on
