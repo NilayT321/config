@@ -31,5 +31,9 @@ let g:tex_IgnoredWarnings =
     \'|42 warning| Package mdframed Warning:'. "\n"
 let g:Tex_IgnoreLevel = 9 
 
+" Configure NERDTree
+autocmd VimEnter * NERDTree | wincmd p
+autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+let NERDTreeMinimalUI=1
 
 syntax on
