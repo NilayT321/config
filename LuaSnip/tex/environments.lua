@@ -119,6 +119,19 @@ return {
 				)
 		),
 
+		-- Definition environment
+		s(
+				{trig = "!defn", snippetType = "autosnippet"},
+				fmta(
+						[[
+								\begin{defn}{<>}{}
+										<>
+								\end{defn}
+						]],
+						{i(1), i(2)}
+				)
+		),
+
 		-- Proof 
 		s(
 				{trig = "!pf", snippetType = "autosnippet"},

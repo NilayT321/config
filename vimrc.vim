@@ -4,11 +4,12 @@
 call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
     Plug 'lervag/vimtex'
     Plug 'dracula/vim', { 'as': 'dracula' }
-    Plug 'joshdick/onedark.vim' 
     Plug 'sheerun/vim-polyglot'
-    Plug 'itchyny/lightline.vim'
     Plug 'preservim/nerdtree'
     Plug 'L3MON4D3/LuaSnip', {'tag': 'v<CurrentMajor>.*', 'do': 'make install_jsregexp'}
+		Plug 'navarasu/onedark.nvim'
+		Plug 'nvim-lualine/lualine.nvim'
+		Plug 'kyazdani42/nvim-web-devicons'
 call plug#end()
 
 " Vimtex settings
@@ -30,16 +31,5 @@ let g:tex_IgnoredWarnings =
     \'|42 warning| Package mdframed Warning:'. "\n"
 let g:Tex_IgnoreLevel = 9 
 
-" configure lightline 
-let g:lightline = {
-    \ 'colorscheme': 'onedark',
-    \ }
-
-" set colorscheme
-
-colorscheme onedark
-let g:onedark_config = {
-    \ 'style': 'cool',
-\}
 
 syntax on
