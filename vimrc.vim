@@ -3,7 +3,6 @@
 
 call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
     Plug 'lervag/vimtex'
-    Plug 'dracula/vim', { 'as': 'dracula' }
     Plug 'sheerun/vim-polyglot'
     Plug 'preservim/nerdtree'
     Plug 'L3MON4D3/LuaSnip', {'tag': 'v<CurrentMajor>.*', 'do': 'make install_jsregexp'}
