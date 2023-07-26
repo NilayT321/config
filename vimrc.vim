@@ -6,9 +6,16 @@ call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
     Plug 'sheerun/vim-polyglot'
     Plug 'preservim/nerdtree'
     Plug 'L3MON4D3/LuaSnip', {'tag': 'v<CurrentMajor>.*', 'do': 'make install_jsregexp'}
-		Plug 'navarasu/onedark.nvim'
-		Plug 'nvim-lualine/lualine.nvim'
-		Plug 'kyazdani42/nvim-web-devicons'
+    Plug 'navarasu/onedark.nvim'
+    Plug 'nvim-lualine/lualine.nvim'
+    Plug 'kyazdani42/nvim-web-devicons'
+		Plug 'neovim/nvim-lspconfig'
+		Plug 'hrsh7th/cmp-nvim-lsp'
+		Plug 'hrsh7th/cmp-buffer'
+		Plug 'hrsh7th/cmp-path'
+		Plug 'hrsh7th/cmp-cmdline'
+		Plug 'hrsh7th/nvim-cmp'
+		Plug 'saadparwaiz1/cmp_luasnip'
 call plug#end()
 
 " Vimtex settings
