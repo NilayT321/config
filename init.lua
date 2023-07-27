@@ -150,5 +150,8 @@ cmp.setup({
 				end
 		},
   })
+
+	-- Mason 
+		require("mason").setup()
 		
 

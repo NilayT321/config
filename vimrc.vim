@@ -4,7 +4,6 @@
 call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
     Plug 'lervag/vimtex'
     Plug 'sheerun/vim-polyglot'
-    Plug 'preservim/nerdtree'
     Plug 'L3MON4D3/LuaSnip', {'tag': 'v<CurrentMajor>.*', 'do': 'make install_jsregexp'}
     Plug 'navarasu/onedark.nvim'
     Plug 'nvim-lualine/lualine.nvim'
@@ -16,6 +15,7 @@ call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
 		Plug 'hrsh7th/cmp-cmdline'
 		Plug 'hrsh7th/nvim-cmp'
 		Plug 'saadparwaiz1/cmp_luasnip'
+		Plug 'williamboman/mason.nvim'
 call plug#end()
 
 " Vimtex settings
@@ -37,9 +37,5 @@ let g:tex_IgnoredWarnings =
     \'|42 warning| Package mdframed Warning:'. "\n"
 let g:Tex_IgnoreLevel = 9 
 
-" Configure NERDTree
-autocmd VimEnter * NERDTree | wincmd p
-autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
-let NERDTreeMinimalUI=1
 
 syntax on
