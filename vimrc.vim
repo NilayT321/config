@@ -16,6 +16,7 @@ call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
 		Plug 'hrsh7th/nvim-cmp'
 		Plug 'saadparwaiz1/cmp_luasnip'
 		Plug 'williamboman/mason.nvim'
+		Plug 'mfussenegger/nvim-jdtls'
 call plug#end()
 
 " Vimtex settings
