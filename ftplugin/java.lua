@@ -1,6 +1,6 @@
 -- If you started neovim within `~/dev/xy/project-1` this would resolve to `project-1`
 local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ':p:h:t')
-local workspace_dir = 'C:\\Users\\ntstone\\Java Projects\\' .. project_name
+local workspace_dir = 'C:\\Users\\nilay\\Java Projects\\' .. project_name
 
 local config = {
   -- The command that starts the language server
@@ -22,14 +22,15 @@ local config = {
     '--add-opens', 'java.base/java.lang=ALL-UNNAMED',
 
     -- 💀
-    '-jar', 'C:\\Users\\ntstone\\AppData\\Local\\nvim-data\\mason\\packages\\jdtls\\plugins\\org.eclipse.equinox.launcher_1.6.500.v20230622-2056.jar',
+    '-jar', 'C:\\Users\\nilay\\AppData\\Local\\nvim-data\\mason\\packages\\jdtls\\plugins\\org.eclipse.equinox.launcher_1.6.500.v20230622-2056.jar',
+
          -- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^                                       ^^^^^^^^^^^^^^
          -- Must point to the                                                     Change this to
          -- eclipse.jdt.ls installation                                           the actual version
 
 
     -- 💀
-    '-configuration', 'C:\\Users\\ntstone\\AppData\\Local\\nvim-data\\mason\\packages\\jdtls\\config_win',
+    '-configuration', 'C:\\Users\\nilay\\AppData\\Local\\nvim-data\\mason\\packages\\jdtls\\config_win',
                     -- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^        ^^^^^^
                     -- Must point to the                      Change to one of `linux`, `win` or `mac`
                     -- eclipse.jdt.ls installation            Depending on your system.

@@ -1,3 +1,7 @@
+-- Disable netrw
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 local vimrc = vim.fn.stdpath("config").."/vimrc.vim"
 vim.cmd.source(vimrc)
 
@@ -43,6 +47,7 @@ require('lualine').setup {
     component_separators = { left = '', right = ''},
     section_separators = { left = '', right = ''},
     disabled_filetypes = {
+				'NvimTree',
       statusline = {},
       winbar = {},
     },
@@ -154,5 +159,34 @@ cmp.setup({
 		-- Mason 
 		require("mason").setup()
 
-		
+-- Nvim-tree 
 
+-- set termguicolors to enable highlight groups
+vim.opt.termguicolors = true
+
+-- empty setup using defaults
+require("nvim-tree").setup()
+
+-- OR setup with some options
+require("nvim-tree").setup({
+		auto_reload_on_write = true,
+		sort_by = "case_sensitive",
+		view = {
+				width = 30,
+		},
+		renderer = {
+				group_empty = true,
+		},
+		filters = {
+				dotfiles = true,
+		},
+})
+
+
+-- Open the tree at startup 
+local function open_nvim_tree() 
+
+		require("nvim-tree.api").tree.open()
+end
+
+vim.api.nvim_create_autocmd({"VimEnter"}, {callback = open_nvim_tree})
