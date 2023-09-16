@@ -1,3 +1,7 @@
+-- Set leader key 
+vim.g.mapleader = ","
+vim.g.maplocalleader = ","
+
 -- Disable netrw
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
@@ -168,11 +172,24 @@ cmp.setup({
 -- set termguicolors to enable highlight groups
 vim.opt.termguicolors = true
 
--- empty setup using defaults
-require("nvim-tree").setup()
+-- Custom mappings for nvim-tree
+local function my_on_attach(bufnr)
+  local api = require "nvim-tree.api"
+
+  local function opts(desc)
+    return { desc = "nvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
+  end
+
+	-- Default mappings 
+	api.config.mappings.default_on_attach(bufnr)
+
+  -- custom mappings
+	vim.keymap.set('n', '<localleader>t', api.tree.toggle)
+end
 
 -- OR setup with some options
 require("nvim-tree").setup({
+		on_attach = my_on_attach,
 		auto_reload_on_write = true,
 		sort_by = "case_sensitive",
 		view = {
@@ -184,16 +201,13 @@ require("nvim-tree").setup({
 		filters = {
 				dotfiles = true,
 		},
+		actions = {
+				open_file = {
+						quit_on_open = true,
+				},
+		},
 })
 
-
--- Open the tree at startup 
-local function open_nvim_tree() 
-
-		require("nvim-tree.api").tree.open()
-end
-
-vim.api.nvim_create_autocmd({"VimEnter"}, {callback = open_nvim_tree})
 
 -- Tree sitter 
 require'nvim-treesitter.configs'.setup {

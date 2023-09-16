@@ -24,7 +24,6 @@ call plug#end()
 " Vimtex settings
 filetype plugin indent on
 syntax enable
-let g:vimtex_view_general_options = 'file:@pdf\#src:@line@tex'
 let g:tex_flavor = 'latex'
 let g:vimtex_view_enabled = 1
 " let g:vimtex_view_method = 'zathura'
