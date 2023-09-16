@@ -33,9 +33,13 @@ vim.cmd[[
   smap <silent><expr> <S-Tab> luasnip#jumpable(-1) ? '<Plug>luasnip-jump-prev' : '<S-Tab>'
 ]]
 
--- Lazy load snippets
-require("luasnip.loaders.from_lua").load({paths = "~/.config/nvim/LuaSnip/"})
-require("luasnip.loaders.from_lua").lazy_load({paths = "~/.config/nvim/LuaSnip/"})
+-- Lazy load snippets (windows config)
+require("luasnip.loaders.from_lua").load({paths = "C:\\Users\\nilay\\AppData\\Local\\nvim\\LuaSnip"})
+require("luasnip.loaders.from_lua").lazy_load({paths = "C:\\Users\\nilay\\AppData\\Local\\nvim\\LuaSnip"})
+
+-- Lazy load snippets (Linux config)
+-- require("luasnip.loaders.from_lua").load({paths = "~/.config/nvim/LuaSnip/"})
+-- require("luasnip.loaders.from_lua").lazy_load({paths = "~/.config/nvim/LuaSnip"})
 
 -- Set colorscheme
 require('onedark').load()
@@ -190,3 +194,11 @@ local function open_nvim_tree()
 end
 
 vim.api.nvim_create_autocmd({"VimEnter"}, {callback = open_nvim_tree})
+
+-- Tree sitter 
+require'nvim-treesitter.configs'.setup {
+		ensure_installed = { "c", "lua", "vim", "vimdoc", "query" },
+		highlight = {
+				enable = true,
+		},
+}

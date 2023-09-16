@@ -18,6 +18,7 @@ call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
 		Plug 'williamboman/mason.nvim'
 		Plug 'mfussenegger/nvim-jdtls'
 		Plug 'nvim-tree/nvim-tree.lua'
+		Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 call plug#end()
 
 " Vimtex settings
@@ -26,7 +27,7 @@ syntax enable
 let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
 let g:tex_flavor = 'latex'
 let g:vimtex_view_enabled = 1
-let g:vimtex_view_method = 'zathura'
+" let g:vimtex_view_method = 'zathura'
 let g:tex_IgnoredWarnings = 
     \'Underfull'."\n".
     \'Overfull'."\n".
