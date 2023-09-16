@@ -72,7 +72,7 @@ return {
 				{trig = "!thrm", snippetType = "autosnippet"},
 				fmta(
 						[[
-								\begin{thrm}{<>}{}
+								\begin{thrm}[<>]
 										<>
 								\end{thrm}
 						]],
@@ -85,7 +85,7 @@ return {
 				{trig = "!examp", snippetType = "autosnippet"},
 				fmta(
 						[[
-								\begin{example}{}{}
+								\begin{example}[]
 										<>
 								\end{example}
 						]],
@@ -98,7 +98,7 @@ return {
 				{trig = "!prop", snippetType = "autosnippet"},
 				fmta(
 						[[
-								\begin{prop}{}{}
+								\begin{prop}[]
 										<>
 								\end{prop}
 						]],
@@ -111,7 +111,7 @@ return {
 				{trig = "!cor", snippetType = "autosnippet"},
 				fmta(
 						[[
-								\begin{cor}{}{}
+								\begin{cor}[]
 										<>
 								\end{cor}
 						]],
@@ -124,7 +124,7 @@ return {
 				{trig = "!defn", snippetType = "autosnippet"},
 				fmta(
 						[[
-								\begin{defn}{<>}{}
+								\begin{defn}[<>]
 										<>
 								\end{defn}
 						]],
@@ -144,4 +144,32 @@ return {
 						{i(1)}
 				)
 		),
+		
+		-- Homework problem block
+		s(
+				{trig = "!prob", snippetType = "autosnippet"},
+				fmta(
+						[[
+								\begin{prob}{<>}{<>}
+										<>
+								\end{prob}
+						]],
+						{i(1), i(2), i(3)}
+				)
+		),
+
+		-- Problem solution environment 
+		s(
+				{trig = "!soln", snippetType = "autosnippet"},
+				fmta(
+						[[
+								\begin{soln}
+										<>
+								\end{soln}
+						]],
+						{i(1)}
+				)
+		),
+
+
 }
