@@ -38,12 +38,12 @@ vim.cmd[[
 ]]
 
 -- Lazy load snippets (windows config)
-require("luasnip.loaders.from_lua").load({paths = "C:\\Users\\nilay\\AppData\\Local\\nvim\\LuaSnip"})
-require("luasnip.loaders.from_lua").lazy_load({paths = "C:\\Users\\nilay\\AppData\\Local\\nvim\\LuaSnip"})
+-- require("luasnip.loaders.from_lua").load({paths = "C:\\Users\\nilay\\AppData\\Local\\nvim\\LuaSnip"})
+-- require("luasnip.loaders.from_lua").lazy_load({paths = "C:\\Users\\nilay\\AppData\\Local\\nvim\\LuaSnip"})
 
 -- Lazy load snippets (Linux config)
--- require("luasnip.loaders.from_lua").load({paths = "~/.config/nvim/LuaSnip/"})
--- require("luasnip.loaders.from_lua").lazy_load({paths = "~/.config/nvim/LuaSnip"})
+require("luasnip.loaders.from_lua").load({paths = "~/.config/nvim/LuaSnip/"})
+require("luasnip.loaders.from_lua").lazy_load({paths = "~/.config/nvim/LuaSnip"})
 
 -- Set colorscheme
 require('onedark').load()
@@ -184,7 +184,7 @@ local function my_on_attach(bufnr)
 	api.config.mappings.default_on_attach(bufnr)
 
   -- custom mappings
-	vim.keymap.set('n', '<localleader>t', api.tree.toggle)
+	vim.keymap.set('n', 'tt', api.tree.toggle)
 end
 
 -- OR setup with some options

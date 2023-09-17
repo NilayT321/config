@@ -171,5 +171,43 @@ return {
 				)
 		),
 
+		-- Itemize environment 
+		s(
+				{trig = "!unl", snippetType = "autosnippet"},
+				fmta(
+						[[
+								\begin{itemize}
+										\item[<>]
+								\end{itemize}
+						]],
+						{i(1)}
+				)
+		),
+
+		-- Enumerate environment 
+		s(
+				{trig = "!enum", snippetType = "autosnippet"},
+				fmta(
+						[[
+								\begin{enumerate}
+										\item[<>]
+								\end{enumerate}
+						]],
+						{i(1)}
+				)
+		),
+
+		-- New item snippet 
+		s(
+				{trig = ";item", snippetType = "autosnippet"},
+				fmta(
+						[[
+								\item[<>]
+						]],
+						{i(1)}
+				)
+		),
+
+
 
 }

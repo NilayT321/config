@@ -1,6 +1,11 @@
 -- If you started neovim within `~/dev/xy/project-1` this would resolve to `project-1`
 local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ':p:h:t')
-local workspace_dir = 'C:\\Users\\nilay\\Java Projects\\' .. project_name
+
+-- For windows
+-- local workspace_dir = 'C:\\Users\\nilay\\Java Projects\\' .. project_name
+
+-- For linux config 
+local workspace_dir = '~/Documents/JavaProjects/' .. project_name 
 
 local config = {
   -- The command that starts the language server
@@ -22,20 +27,19 @@ local config = {
     '--add-opens', 'java.base/java.lang=ALL-UNNAMED',
 
     -- 💀
-    '-jar', 'C:\\Users\\nilay\\AppData\\Local\\nvim-data\\mason\\packages\\jdtls\\plugins\\org.eclipse.equinox.launcher_1.6.500.v20230622-2056.jar',
-
+    -- '-jar', 'C:\\Users\\nilay\\AppData\\Local\\nvim-data\\mason\\packages\\jdtls\\plugins\\org.eclipse.equinox.launcher_1.6.500.v20230622-2056.jar', -- Windows
          -- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^                                       ^^^^^^^^^^^^^^
          -- Must point to the                                                     Change this to
          -- eclipse.jdt.ls installation                                           the actual version
 
-
+		'-jar', '~/.local/share/nvim/mason/packages/jdtls/plugins/org.eclipse.equinox.launcher_1.6.500.v20230717-2134.jar' -- Linux
     -- 💀
-    '-configuration', 'C:\\Users\\nilay\\AppData\\Local\\nvim-data\\mason\\packages\\jdtls\\config_win',
+    -- '-configuration', 'C:\\Users\\nilay\\AppData\\Local\\nvim-data\\mason\\packages\\jdtls\\config_win', -- Windows
                     -- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^        ^^^^^^
                     -- Must point to the                      Change to one of `linux`, `win` or `mac`
                     -- eclipse.jdt.ls installation            Depending on your system.
 
-
+		'-configuration', '~/.local/share/nvim/mason/packages/jdtls/config_linux' -- Linux 
     -- 💀
     -- See `data directory configuration` section in the README
     '-data', workspace_dir
