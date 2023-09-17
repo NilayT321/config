@@ -177,10 +177,10 @@ return {
 				fmta(
 						[[
 								\begin{itemize}
-										\item[<>]
+										\item[<>] <>
 								\end{itemize}
 						]],
-						{i(1)}
+						{i(1), i(2)}
 				)
 		),
 
@@ -190,10 +190,10 @@ return {
 				fmta(
 						[[
 								\begin{enumerate}
-										\item[<>]
+										\item[<>] <>
 								\end{enumerate}
 						]],
-						{i(1)}
+						{i(1), i(2)}
 				)
 		),
 
@@ -202,9 +202,9 @@ return {
 				{trig = ";item", snippetType = "autosnippet"},
 				fmta(
 						[[
-								\item[<>]
+								\item[<>] <>
 						]],
-						{i(1)}
+						{i(1), i(2)}
 				)
 		),
 
