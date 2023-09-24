@@ -37,7 +37,8 @@ let g:tex_IgnoredWarnings =
     \'Citation %.%# undefined'."\n".
     \'Double space found.'."\n".
     \'|42 warning| Package mdframed Warning:'. "\n"
-let g:Tex_IgnoreLevel = 9 
+let g:Tex_IgnoreLevel = 9
+let g:vimtex_quickfix_open_on_warning = 0
 
 
 syntax on

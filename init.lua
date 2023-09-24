@@ -2,6 +2,10 @@
 vim.g.mapleader = ","
 vim.g.maplocalleader = ","
 
+-- Navigate between buffers 
+vim.keymap.set('n', '<localleader>bp', '<cmd>bp <cr>')
+vim.keymap.set('n', '<localleader>bn', '<cmd>bn <cr>')
+
 -- Disable netrw
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
@@ -184,7 +188,7 @@ local function my_on_attach(bufnr)
 	api.config.mappings.default_on_attach(bufnr)
 
   -- custom mappings
-	vim.keymap.set('n', 'tt', api.tree.toggle)
+	vim.keymap.set('n', '<localleader>t', api.tree.toggle)
 end
 
 -- OR setup with some options
