@@ -177,10 +177,10 @@ return {
 				fmta(
 						[[
 								\begin{itemize}
-										\item[<>] <>
+										\item <>
 								\end{itemize}
 						]],
-						{i(1), i(2)}
+						{i(1)}
 				)
 		),
 
@@ -197,17 +197,17 @@ return {
 				)
 		),
 
-		-- New item snippet 
+		-- New frame in beamer environments
 		s(
-				{trig = ";item", snippetType = "autosnippet"},
+				{trig = "!fr", snippetType = "autosnippet"},
 				fmta(
 						[[
-								\item[<>] <>
+								\begin{frame}{<>}
+										<>
+								\end{frame}
 						]],
 						{i(1), i(2)}
 				)
 		),
-
-
 
 }
