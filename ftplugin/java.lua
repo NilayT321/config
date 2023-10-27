@@ -3,7 +3,7 @@ local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ':p:h:t')
 
 
 -- For linux config 
-local workspace_dir = '~/Documents/JavaProjects/' .. project_name 
+local workspace_dir = '/home/ntripathi/Documents/JavaProjects/' .. project_name 
 
 local config = {
   -- The command that starts the language server
@@ -22,9 +22,9 @@ local config = {
     '--add-opens', 'java.base/java.util=ALL-UNNAMED',
     '--add-opens', 'java.base/java.lang=ALL-UNNAMED',
     -- 💀
-		'-jar','~/.local/share/nvim/mason/packages/jdtls/plugins/org.eclipse.equinox.launcher_1.6.500.v20230717-2134.jar',
+		'-jar','/home/ntripathi/.local/share/nvim/mason/packages/jdtls/plugins/org.eclipse.equinox.launcher_1.6.500.v20230717-2134.jar',
     -- 💀
-		'-configuration','~/.local/share/nvim/mason/packages/jdtls/config_linux', -- Linux 
+		'-configuration','/home/ntripathi/.local/share/nvim/mason/packages/jdtls/config_linux', -- Linux 
     -- 💀
     -- See `data directory configuration` section in the README
     '-data', workspace_dir
