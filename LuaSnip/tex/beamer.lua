@@ -19,7 +19,7 @@ return {
 				{trig = "!bl", snippetType = "autosnippet"},
 				fmta(
 						[[
-								\begin{block}{<>}
+								\begin{block}[<>]
 										<>
 								\end{block}
 						]],
@@ -32,7 +32,7 @@ return {
 				{trig = "!albl", snippetType = "autosnippet"},
 				fmta(
 						[[
-								\begin{alertblock}{<>}
+								\begin{alertblock}[<>]
 										<>
 								\end{alertblock}
 						]],
@@ -45,7 +45,7 @@ return {
 				{trig = "!bex", snippetType = "autosnippet"},
 				fmta(
 						[[
-								\begin{example}{<>}
+								\begin{example}[<>]
 										<>
 								\end{example}
 						]],
@@ -58,7 +58,7 @@ return {
 				{trig = "!bthm", snippetType = "autosnippet"},
 				fmta(
 						[[
-								\begin{theorem}{<>}
+								\begin{theorem}[<>]
 										<>
 								\end{theorem}
 						]],
@@ -71,7 +71,7 @@ return {
 				{trig = "!bdefn", snippetType = "autosnippet"},
 				fmta(
 						[[
-								\begin{definition}{<>}
+								\begin{definition}[<>]
 										<>
 								\end{definition}
 						]],
@@ -84,7 +84,7 @@ return {
 				{trig = "!bpf", snippetType = "autosnippet"},
 				fmta(
 						[[
-								\begin{proof}{<>}
+								\begin{proof}[<>]
 										<>
 								\end{proof}
 						]],
@@ -92,5 +92,14 @@ return {
 				)
 		),
 
-
+		-- Snippet for inline alert text 
+		s(
+				{trig = ".al", snippetType = "autosnippet"},
+				fmta(
+						[[ 
+								\alert{<>}
+						]],
+						{i(1)}
+				)
+		),
 }
