@@ -14,7 +14,6 @@ local vimrc = vim.fn.stdpath("config").."/vimrc.vim"
 vim.cmd.source(vimrc)
 
 vim.o.shiftwidth = 4
-vim.o.smarttab = true
 
 require("luasnip").config.set_config({ -- Setting LuaSnip config
 
@@ -229,3 +228,14 @@ require('Comment').setup()
 
 -- Bufferline 
 require("bufferline").setup{}
+
+-- Vimtex 
+vim.g.vimtex_compiler_latexmk = {
+    options = {
+        '-verbose',
+        '-file-line-error',
+        '-synctex=1',
+        '-interaction=nonstopmode',
+        '-shell-escape',
+    },
+}

@@ -60,5 +60,11 @@ return {
 		s(
 				{trig = "txt", snippetType = "autosnippet"},
 				fmta("\\text{<>}", {i(1)})
+		),
+
+		-- Mathbf 
+		s(
+				{trig = "mbf", snippetType = "autosnippet"},
+				fmta("\\mathbf{<>}", {i(1)})
 		)
 }
