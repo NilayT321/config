@@ -21,6 +21,7 @@ call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
 		Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 		Plug 'numToStr/Comment.nvim'
 		Plug 'akinsho/bufferline.nvim', { 'tag': '*' }
+		Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 " Vimtex settings
@@ -28,6 +29,8 @@ filetype plugin indent on
 syntax enable
 let g:tex_flavor = 'latex'
 let g:vimtex_view_enabled = 1
+
+" Not using zahutra due to Wayland issues
 " let g:vimtex_view_method = 'zathura'
 let g:tex_IgnoredWarnings = 
     \'Underfull'."\n".
