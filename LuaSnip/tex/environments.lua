@@ -80,6 +80,19 @@ return {
 				)
 		),
 
+		-- Lemma environment 
+		s(
+				{trig = "!lem", snippetType = "autosnippet"},
+				fmta(
+						[[
+								\begin{lem}[<>]
+										<>
+								\end{lem}
+						]],
+						{i(1), i(2)}
+				)
+		),
+
 		-- Example environment
 		s(
 				{trig = "!examp", snippetType = "autosnippet"},
@@ -150,14 +163,13 @@ return {
 				{trig = "!prob", snippetType = "autosnippet"},
 				fmta(
 						[[
-								\begin{prob}{<>}{<>}
+								\begin{problem}[<>]
 										<>
-								\end{prob}
+								\end{problem}
 						]],
-						{i(1), i(2), i(3)}
+						{i(1), i(2)}
 				)
 		),
-
 		-- Problem solution environment 
 		s(
 				{trig = "!soln", snippetType = "autosnippet"},
@@ -190,10 +202,10 @@ return {
 				fmta(
 						[[
 								\begin{enumerate}
-										\item[<>] <>
+										\item <>
 								\end{enumerate}
 						]],
-						{i(1), i(2)}
+						{i(1)}
 				)
 		),
 

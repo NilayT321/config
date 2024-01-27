@@ -44,6 +44,7 @@ let g:tex_IgnoredWarnings =
     \'|42 warning| Package mdframed Warning:'. "\n"
 let g:Tex_IgnoreLevel = 9
 let g:vimtex_quickfix_open_on_warning = 0
-
+set conceallevel=2
+let g:tex_conceal='abdmg'
 
 syntax on
