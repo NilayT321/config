@@ -21,6 +21,8 @@ call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
 		Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 		Plug 'numToStr/Comment.nvim'
 		Plug 'akinsho/bufferline.nvim', { 'tag': '*' }
+		Plug 'kevinhwang91/promise-async',
+		Plug 'kevinhwang91/nvim-ufo'
 		Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 

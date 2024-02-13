@@ -3,7 +3,7 @@
 return {
 		-- Color definition block
 		s(
-				{trig = "cdefn", snippetType = "autosnippet"}, 
+				{trig = "!cdefn", snippetType = "autosnippet"}, 
 				fmta(
 						[[
 								\begin{cdefn}{<>}{<>}
@@ -16,7 +16,7 @@ return {
 
 		-- Color theorem block 
 		s(
-				{trig = "cthrm", snippetType = "autosnippet"},
+				{trig = "!cthrm", snippetType = "autosnippet"},
 				fmta(
 						[[ 
 								\begin{cthrm}{<>}{<>}
@@ -29,7 +29,7 @@ return {
 
 		-- Color proposition block 
 		s(
-				{trig = "cprop", snippetType = "autosnippet"},
+				{trig = "!cprop", snippetType = "autosnippet"},
 				fmta(
 						[[ 
 								\begin{cprop}{<>}{<>}
@@ -42,7 +42,7 @@ return {
 
 		-- Color example block 
 		s(
-				{trig = "cexamp", snippetType = "autosnippet"},
+				{trig = "!cexamp", snippetType = "autosnippet"},
 				fmta(
 						[[ 
 								\begin{cexamp}{<>}{<>}
