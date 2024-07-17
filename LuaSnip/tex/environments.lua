@@ -299,5 +299,21 @@ return {
 						{i(1), i(2)}
 				)
 		),
+		
+		-- Figure
+		s(
+				{trig = "!fig", snippetType = "autosnippet"},
+				fmta(
+						[[
+								\begin{figure}[<>]
+										\centering
+										\includegraphics[<>]{<>}
+										\caption{<>}
+										\label{<>}
+								\end{figure}
+						]],
+						{i(1), i(2), i(3), i(4), i(5)}
+				)
+		),
 
 }

@@ -40,16 +40,14 @@ vim.cmd[[
   smap <silent><expr> <S-Tab> luasnip#jumpable(-1) ? '<Plug>luasnip-jump-prev' : '<S-Tab>'
 ]]
 
--- Lazy load snippets (windows config)
--- require("luasnip.loaders.from_lua").load({paths = "C:\\Users\\nilay\\AppData\\Local\\nvim\\LuaSnip"})
--- require("luasnip.loaders.from_lua").lazy_load({paths = "C:\\Users\\nilay\\AppData\\Local\\nvim\\LuaSnip"})
-
 -- Lazy load snippets (Linux config)
 require("luasnip.loaders.from_lua").load({paths = "~/.config/nvim/LuaSnip/"})
 require("luasnip.loaders.from_lua").lazy_load({paths = "~/.config/nvim/LuaSnip"})
 
 -- Set colorscheme
 require('onedark').load()
+-- vim.o.background = "dark" -- or "light" for light mode
+-- vim.cmd([[colorscheme gruvbox]])
 
 require('lualine').setup {
   options = {
@@ -100,6 +98,8 @@ local lspconfig = require('lspconfig')
 lspconfig.pyright.setup {}
 lspconfig.clangd.setup {}
 lspconfig.texlab.setup {}
+lspconfig.hls.setup {}
+lspconfig.rust_analyzer.setup {}
 
 -- Set up nvim-cmp. Autocomplete
 
@@ -219,18 +219,6 @@ require("nvim-tree").setup({
 		},
 })
 
-
--- Tree sitter 
-require'nvim-treesitter.configs'.setup {
-		ensure_installed = { "c", "lua", "vim", "vimdoc", "query" },
-		highlight = {
-				enable = true,
-		},
-
-		sync_install = false,
-		auto_install = false,
-}
-
 -- Comments 
 require('Comment').setup()
 
@@ -310,3 +298,10 @@ for _, ls in ipairs(language_servers) do
     })
 end
 require('ufo').setup()
+
+-- Telescope
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
+vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})

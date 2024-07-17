@@ -4,7 +4,7 @@
 call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
     Plug 'lervag/vimtex'
     Plug 'sheerun/vim-polyglot'
-    Plug 'L3MON4D3/LuaSnip', {'tag': 'v<CurrentMajor>.*', 'do': 'make install_jsregexp'}
+    Plug 'L3MON4D3/LuaSnip', {'tag': 'v2.*', 'do': 'make install_jsregexp'}
     Plug 'navarasu/onedark.nvim'
     Plug 'nvim-lualine/lualine.nvim'
     Plug 'kyazdani42/nvim-web-devicons'
@@ -18,12 +18,13 @@ call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
 		Plug 'williamboman/mason.nvim'
 		Plug 'mfussenegger/nvim-jdtls'
 		Plug 'nvim-tree/nvim-tree.lua'
-		Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 		Plug 'numToStr/Comment.nvim'
 		Plug 'akinsho/bufferline.nvim', { 'tag': '*' }
 		Plug 'kevinhwang91/promise-async',
 		Plug 'kevinhwang91/nvim-ufo'
 		Plug 'neoclide/coc.nvim', {'branch': 'release'}
+		Plug 'nvim-lua/plenary.nvim'
+		Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.8' }
 call plug#end()
 
 " Vimtex settings
@@ -33,7 +34,7 @@ let g:tex_flavor = 'latex'
 let g:vimtex_view_enabled = 1
 
 " Not using zahutra due to Wayland issues
-" let g:vimtex_view_method = 'zathura'
+let g:vimtex_view_method = 'zathura_simple'
 let g:tex_IgnoredWarnings = 
     \'Underfull'."\n".
     \'Overfull'."\n".

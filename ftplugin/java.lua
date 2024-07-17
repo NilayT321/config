@@ -22,7 +22,7 @@ local config = {
     '--add-opens', 'java.base/java.util=ALL-UNNAMED',
     '--add-opens', 'java.base/java.lang=ALL-UNNAMED',
     -- 💀
-		'-jar','/home/ntripathi/.local/share/nvim/mason/packages/jdtls/plugins/org.eclipse.equinox.launcher_1.6.500.v20230717-2134.jar',
+		'-jar','/home/ntripathi/.local/share/nvim/mason/packages/jdtls/plugins/org.eclipse.equinox.launcher_1.6.700.v20231214-2017.jar',
     -- 💀
 		'-configuration','/home/ntripathi/.local/share/nvim/mason/packages/jdtls/config_linux', -- Linux 
     -- 💀
