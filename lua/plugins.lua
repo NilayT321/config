@@ -24,8 +24,8 @@ call('plug#begin', plug_path)
 		Plug ('akinsho/bufferline.nvim', { tag = '*' })
 		Plug 'kevinhwang91/promise-async'
 		Plug 'kevinhwang91/nvim-ufo'
-		Plug ('neoclide/coc.nvim', {branch= 'release'})
 		Plug 'nvim-lua/plenary.nvim'
-		Plug ('nvim-telescope/telescope.nvim', { tag = '0.1.8' })
+		Plug 'nvim-telescope/telescope.nvim'
 		Plug 'MeanderingProgrammer/markdown.nvim'
+		Plug 'Julian/lean.nvim'
 call('plug#end')

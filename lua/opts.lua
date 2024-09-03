@@ -30,3 +30,4 @@ require('Comment').setup()
 
 -- Bufferline 
 require("bufferline").setup{}
+
