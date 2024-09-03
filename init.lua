@@ -9,4 +9,3 @@ require('folding') 							-- Options for folding via Nvim-UFO
 require('telescope') 						-- Telescope config
 require('vimtex') 							-- Vimtex config
 require('markdown') 						-- Markdown.nvim config
-require('leanconfig') 					-- Lean config
