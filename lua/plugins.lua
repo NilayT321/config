@@ -27,4 +27,5 @@ call('plug#begin', plug_path)
 		Plug 'nvim-lua/plenary.nvim'
 		Plug 'nvim-telescope/telescope.nvim'
 		Plug 'MeanderingProgrammer/markdown.nvim'
+		Plug 'let-def/texpresso.vim'
 call('plug#end')

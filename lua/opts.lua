@@ -21,6 +21,8 @@ vim.g.loaded_netrwPlugin = 1
 -- set termguicolors to enable highlight groups
 vim.opt.termguicolors = true
 
+-- Set Ctrl+S to save in insert mode 
+vim.keymap.set('i', '<C-s', '<cmd> w <cr> i')
 
 -- Set colorscheme
 require('onedark').load()
