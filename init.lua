@@ -10,3 +10,4 @@ require('telescope') 						-- Telescope config
 require('vimtex') 							-- Vimtex config
 require('markdown') 						-- Markdown.nvim config
 require('texpresso') 						-- Texpresso
+require('typstpreview') 				-- Typst preview

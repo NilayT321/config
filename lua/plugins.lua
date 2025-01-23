@@ -27,5 +27,7 @@ call('plug#begin', plug_path)
 		Plug 'nvim-lua/plenary.nvim'
 		Plug 'nvim-telescope/telescope.nvim'
 		Plug 'MeanderingProgrammer/markdown.nvim'
+		Plug ('chomosuke/typst-preview.nvim', {tag='v1.*'})
 		Plug 'let-def/texpresso.vim'
+		Plug 'kaarmu/typst.vim'
 call('plug#end')

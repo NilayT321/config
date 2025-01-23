@@ -1,7 +1,7 @@
 -- Vimtex configuration
-
 vim.g.vimtex_compiler_latexmk = {
     options = {
+				'-lualatex',
         '-verbose',
         '-file-line-error',
         '-synctex=1',
