@@ -33,3 +33,6 @@ require('Comment').setup()
 -- Bufferline 
 require("bufferline").setup{}
 
+-- Diagnostic messages disappeared for some reason? 
+-- Turn them back on 
+vim.diagnostic.config({virtual_text = true})

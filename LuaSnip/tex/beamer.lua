@@ -42,7 +42,7 @@ return {
 
 		-- Examples block
 		s(
-				{trig = "!bex", snippetType = "autosnippet"},
+				{trig = "!exbl", snippetType = "autosnippet"},
 				fmta(
 						[[
 								\begin{example}[<>]
@@ -55,7 +55,7 @@ return {
 
 		-- Theorem block 
 		s(
-				{trig = "!bthm", snippetType = "autosnippet"},
+				{trig = "!thmbl", snippetType = "autosnippet"},
 				fmta(
 						[[
 								\begin{theorem}[<>]
@@ -68,7 +68,7 @@ return {
 
 		-- Definition block 
 		s(
-				{trig = "!bdefn", snippetType = "autosnippet"},
+				{trig = "!defbl", snippetType = "autosnippet"},
 				fmta(
 						[[
 								\begin{definition}[<>]
@@ -81,7 +81,7 @@ return {
 
 		-- Proof block 
 		s(
-				{trig = "!bpf", snippetType = "autosnippet"},
+				{trig = "!prfbl", snippetType = "autosnippet"},
 				fmta(
 						[[
 								\begin{proof}[<>]
@@ -94,7 +94,7 @@ return {
 
 		-- Snippet for inline alert text 
 		s(
-				{trig = ".al", snippetType = "autosnippet"},
+				{trig = "!al", snippetType = "autosnippet"},
 				fmta(
 						[[ 
 								\alert{<>}

@@ -50,21 +50,21 @@ return {
 				fmta("\\left( <> \\right)", {i(1)})
 		),
 
-		-- Left and right square brackets
-		s(
-				{trig = "[]", snippetType = "autosnippet"},
-				fmta("\\left[ <> \\right]", {i(1)})
-		),
+		-- -- Left and right square brackets
+		-- s(
+		-- 		{trig = "[]", snippetType = "autosnippet"},
+		-- 		fmta("\\left[ <> \\right]", {i(1)})
+		-- ),
 
 		-- Text in math mode
 		s(
-				{trig = "txt", snippetType = "autosnippet"},
+				{trig = "!txt", snippetType = "autosnippet"},
 				fmta("\\text{<>}", {i(1)})
 		),
 
 		-- Mathbf 
 		s(
-				{trig = "mbf", snippetType = "autosnippet"},
+				{trig = "!mbf", snippetType = "autosnippet"},
 				fmta("\\mathbf{<>}", {i(1)})
 		)
 }

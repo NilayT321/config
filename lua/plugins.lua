@@ -30,4 +30,5 @@ call('plug#begin', plug_path)
 		Plug ('chomosuke/typst-preview.nvim', {tag='v1.*'})
 		Plug 'let-def/texpresso.vim'
 		Plug 'kaarmu/typst.vim'
+		Plug 'Julian/lean.nvim'
 call('plug#end')
