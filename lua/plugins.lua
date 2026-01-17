@@ -31,4 +31,8 @@ call('plug#begin', plug_path)
 		Plug 'let-def/texpresso.vim'
 		Plug 'kaarmu/typst.vim'
 		Plug 'Julian/lean.nvim'
+		Plug 'brianhuster/live-preview.nvim'
+		Plug 'Jezda1337/nvim-html-css'
+		Plug 'nvim-treesitter/nvim-treesitter'
+		Plug 'windwp/nvim-ts-autotag'
 call('plug#end')

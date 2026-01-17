@@ -7,7 +7,8 @@ require('tree') 								-- Nvim Tree config
 require('opts') 								-- Misc options
 require('folding') 							-- Options for folding via Nvim-UFO
 require('telescope') 						-- Telescope config
-require('vimtex') 							-- Vimtex config
+require('latex') 							-- Vimtex config
 require('markdown') 						-- Markdown.nvim config
 require('texpresso') 						-- Texpresso
 require('typstpreview') 				-- Typst preview
+require('htmlcssjs')						-- HTML, CSS, JS setup

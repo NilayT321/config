@@ -6,11 +6,11 @@ return {
 				{trig = "!cdefn", snippetType = "autosnippet"}, 
 				fmta(
 						[[
-								\begin{cdefn}{<>}{<>}
+								\begin{cdefn}[<>]
 										<>
 								\end{cdefn}
 						]], 
-						{i(1), i(2), i(3)}
+						{i(1), i(2)}
 				)
 		),
 
@@ -19,11 +19,11 @@ return {
 				{trig = "!cthrm", snippetType = "autosnippet"},
 				fmta(
 						[[ 
-								\begin{cthrm}{<>}{<>}
+								\begin{cthrm}[<>]
 										<>
 								\end{cthrm}
 						]],
-						{i(1), i(2), i(3)}
+						{i(1), i(2)}
 				)
 		),
 
@@ -32,11 +32,11 @@ return {
 				{trig = "!cprop", snippetType = "autosnippet"},
 				fmta(
 						[[ 
-								\begin{cprop}{<>}{<>}
+								\begin{cprop}[<>]
 										<>
 								\end{cprop}
 						]],
-						{i(1), i(2), i(3)}
+						{i(1), i(2)}
 				)
 		),
 
@@ -45,11 +45,11 @@ return {
 				{trig = "!cexamp", snippetType = "autosnippet"},
 				fmta(
 						[[ 
-								\begin{cexamp}{<>}{<>}
+								\begin{cexamp}[<>]
 										<>
 								\end{cexamp}
 						]],
-						{i(1), i(2), i(3)}
+						{i(1), i(2)}
 				)
 		),
 }

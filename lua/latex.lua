@@ -32,3 +32,11 @@ vim.cmd(
 vim.g.Tex_IgnoreLevel = 9
 vim.g.vimtex_quickfix_open_on_warning = 0 
 vim.g.tex_conceal = 'abdmg'
+
+-- Inkscape figs 
+vim.cmd([[
+		inoremap <C-f> <Esc>: silent exec '.!inkscape-figures create "'.getline('.').'" "'.b:vimtex.root.'/figures/"'<CR><CR>:w<CR>
+		nnoremap <C-f> : silent exec '!inkscape-figures edit "'.b:vimtex.root.'/figures/" > /dev/null 2>&1 &'<CR><CR>:redraw!<CR>
+		]]
+)
+

@@ -22,7 +22,7 @@ return {
 
 		-- Integrals 
 		s(
-				{trig = "iint", snippetType = "autosnippet"}, 
+				{trig = "!int", snippetType = "autosnippet"}, 
 				fmta("\\int_{<>}^{<>}", {i(1), i(2)})
 		),
 
@@ -66,5 +66,16 @@ return {
 		s(
 				{trig = "!mbf", snippetType = "autosnippet"},
 				fmta("\\mathbf{<>}", {i(1)})
-		)
+		),
+
+		-- RightArrow
+		s(
+				{trig = "!->", snippetType = "autosnippet"},
+				fmta("\\xrightarrow{<>}", {i(1)})
+		),
+
+		s(
+				{trig = "!<-", snippetType = "autosnippet"},
+				fmta("\\xleftarrow{<>}", {i(1)})
+		),
 }

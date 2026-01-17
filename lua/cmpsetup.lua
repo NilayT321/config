@@ -52,6 +52,7 @@ cmp.setup({
 
     sources = cmp.config.sources({
       { name = 'nvim_lsp' },
+			{ name = 'html-css' },
       { name = 'luasnip' }, 
     }, {
       { name = 'buffer' },
